@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Lovense_Server_Java:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Lovense_Server_Java_jar</output-path>
+    <root id="archive" name="Lovense_Server_Java.jar">
+      <element id="module-output" name="Lovense_Server_Java" />
+    </root>
+  </artifact>
+</component>
