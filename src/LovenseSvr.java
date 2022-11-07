@@ -1,12 +1,14 @@
-import java.io.*;  
+import java.io.*;
 import java.net.*;
-import java.lang.*; 
+import java.lang.*;
 import java.io.DataInputStream;
 
  public class LovenseSvr
 {
 	InputStream in;
+	OutputStream out;
 	DataInputStream dis;
+	DataOutputStream dos;
 	String read;
 	ServerSocket serverSocket;
 	Socket sock;
@@ -19,19 +21,8 @@ import java.io.DataInputStream;
 		{
 			read = dis.readUTF();
 			System.out.println(read);
-			
-			if(read.startsWith("rsi"))
-			{
-			}
-			
-			
-			if(read.startsWith("close"))
-			{
-				dis.close();
-				in.close();
-				serverSocket.close();
-				startSvr();
-			}
+			dos.write(dis.read());
+
 			Thread.sleep(2);
 		}
    	}
@@ -39,9 +30,11 @@ import java.io.DataInputStream;
    	public void startSvr() throws Exception
    	{
    		serverSocket = new ServerSocket(8888);
-      sock = serverSocket.accept();
+      	sock = serverSocket.accept();
 		in = sock.getInputStream();
 		dis = new DataInputStream(in);
+		out = sock.getOutputStream();
+		dos = new DataOutputStream(out);
 	}
    	
    	public static void main(String args[]) throws Exception

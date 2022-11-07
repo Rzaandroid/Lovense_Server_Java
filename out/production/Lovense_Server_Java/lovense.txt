@@ -1,0 +1,5 @@
+curl -i -X POST -H 'Content-Type: application/json' -d '{"token": "MKT1+Nypf0wxUvgKr9TtXCVcwbTRnTttsYEVBcYIVZ0el+ZROmtm73zhn1LXm/s4", "uid": "Bigwillyrez", "v": 2}' https://api.lovense.com/api/lan/getQrCode
+
+curl -i -X POST -H 'Content-Type: application/json' -d '{"token": "MKT1+Nypf0wxUvgKr9TtXCVcwbTRnTttsYEVBcYIVZ0el+ZROmtm73zhn1LXm/s4", "command": "Vibrate:16", "timeSec": 20, "loopRunningSec": 9, "loopPauseSec": 4, "uid": "Bigwillyrez", "apiVer": 1}' https://api.lovense.com/api/lan/v2/command
+
+
